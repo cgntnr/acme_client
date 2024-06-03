@@ -1,0 +1,9 @@
+#!/bin/bash
+DIRECTORY=$(dirname "$0")
+echo "Changing to ${DIRECTORY}"
+cd  "$DIRECTORY" || exit 1
+
+pip install dnslib cryptography flask
+
+echo "Run your project here."
+python3 acme.py "$@"
